@@ -22,6 +22,12 @@ chrome.runtime.onInstalled.addListener(() => {
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: 'binary.bot' },
           }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlMatches: 'deriv.app' },
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlMatches: '.github.io/deriv-app/' },
+          }),
         ],
         // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
